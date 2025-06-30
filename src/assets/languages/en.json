@@ -6,7 +6,7 @@
 	},
 	"about": {
 		"title": "About me",
-		"description": "Self-taught front-end web developer with <span>2 year of experience</span> as a freelancer, learning through personal and professional projects. I build web applications using technologies like <span>React, Next.js, Tailwind</span>, among others. I speak <span>Spanish and English</span>, and I'm passionate about creating 3D art."
+		"description": "<span>Front-end</span> web developer in training, with experience in real-world projects during internships. I work with HTML, JavaScript, SCSS, Bootstrap, and Laravel, among other technologies. My background in <span>Economics and Tourism</span> has given me a strategic mindset and strong digital skills. I am curious, responsible, and eager to keep learning."
 	},
 	"settings": {
 		"darkmode": "Dark mode",

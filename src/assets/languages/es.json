@@ -2,21 +2,17 @@
 	"close": "Cerrar",
 	"title": {
 		"hello": "Hola, soy",
-		"webdeveloper": "Desarrollador web"
+		"webdeveloper": "Desarrolladora web front-end"
 	},
 	"about": {
 		"title": "Sobre mí",
-		"description": "Desarrollador web front-end autodidacta con <span>1 año de experiencia</span> como freelancer y aprendiendo de proyectos personales y profesionales. Desarrollo aplicaciones web con tecnologías como <span>React, Next.js, Tailwind</span>, entre otras. Hablo <span>Español e Inglés</span> y me apasiona la creación de arte 3D."
+		"description": "Desarrolladora web <span>front-end</span> en formación, con experiencia en proyectos reales durante prácticas. Manejo HTML, JavaScript, SCSS, Bootstrap y Laravel, entre otras tecnologías. Mi formación en <span>Economía y Turismo</span> me ha aportado una visión estratégica y habilidades digitales. Soy curiosa, responsable y con muchas ganas de seguir aprendiendo."
 	},
 	"settings": {
 		"darkmode": "Modo oscuro",
 		"lightmode": "Modo claro",
 		"english": "Inglés",
-		"spanish": "Español",
-		"sound": "Sonido",
-		"mute": "Silenciar",
-		"theme": "Cambiar tema",
-		"code": "Ver código"
+		"spanish": "Español"
 	},
 	"social": {
 		"title": "Redes sociales"

@@ -1,108 +1,112 @@
 {
-	"html": {
-		"name": "HTML",
-		"color": "#E34F26",
-		"skills": true
-	},
-	"css": {
-		"name": "CSS",
-		"color": "#1572B6",
-		"skills": true
-	},
-	"javascript": {
-		"name": "JavaScript",
-		"color": "#F7DF1E",
-		"contrast": true,
-		"skills": true
-	},
-	"typescript": {
-		"name": "TypeScript",
-		"color": "#3178C6",
-		"skills": true
-	},
-	"react": {
-		"name": "React",
-		"color": "#61DBFB",
-		"contrast": true,
-		"skills": true
-	},
-	"nextjs": {
-		"name": "Next.js",
-		"color": "#000000",
-		"skills": true
-	},
-	"tailwind": {
-		"name": "Tailwind",
-		"color": "#06B6D4",
-		"skills": true
-	},
-	"git": {
-		"name": "Git",
-		"color": "#F05032",
-		"skills": true
-	},
-	"figma": {
-		"name": "Figma",
-		"color": "#F24E1E",
-		"skills": true
-	},
-	"bootstrap": {
-		"name": "Bootstrap",
-		"color": "#7952B3"
-	},
-	"sass": {
-		"name": "Sass",
-		"color": "#CC6699",
-		"skills": true
-	},
-	"node": {
-		"name": "Node",
-		"color": "#339933",
-		"skills": true
-	},
-	"express": {
-		"name": "Express",
-		"color": "#000000",
-		"skills": true
-	},
-	"threejs": {
-		"name": "Three.js",
-		"color": "#000000",
-		"skills": true
-	},
-	"blender": {
-		"name": "Blender",
-		"color": "#F5792A",
-		"skills": true
-	},
-	"leaflet": {
-		"name": "LeafletJS",
-		"color": "#199900"
-	},
-	"axios": {
-		"name": "Axios",
-		"color": "#5A29E4"
-	},
-	"styledComponents": {
-		"name": "Styled Components",
-		"color": "#DB7093"
-	},
-	"svelte": {
-		"name": "Svelte",
-		"color": "#FF3E00",
-		"skills": true
-	},
-	"astro": {
-		"name": "Astro",
-		"color": "#BC52EE",
-		"skills": true
-	},
-	"supabase": {
-		"name": "Supabase",
-		"color": "#27b072"
-	},
-	"gsap": {
-		"name": "GSAP",
-		"color": "#88CE02"
-	}
+  "html": {
+    "name": "HTML",
+    "color": "#E34F26",
+    "skills": true
+  },
+  "css": {
+    "name": "CSS",
+    "color": "#1572B6",
+    "skills": true
+  },
+  "Bootstrap": {
+    "name": "Bootstrap",
+    "color": "#7952B3",
+    "skills": true
+  },
+  "Laravel": {
+    "name": "Laravel",
+    "color": "#FF2D20",
+    "skills": true
+  },
+  "javascript": {
+    "name": "JavaScript",
+    "color": "#F7DF1E",
+    "contrast": true,
+    "skills": true
+  },
+  "typescript": {
+    "name": "TypeScript",
+    "color": "#3178C6",
+    "skills": true
+  },
+  "XML": {
+    "name": "XML",
+    "color": "#005FAD",
+    "skills": true
+  },
+  "wireshark": {
+    "name": "wireshark",
+    "color": "#1679A7",
+    "skills": true
+  },
+  "git": {
+    "name": "Git",
+    "color": "#F05032",
+    "skills": true
+  },
+  "figma": {
+    "name": "Figma",
+    "color": "#F24E1E",
+    "skills": true
+  },
+  "bootstrap": {
+    "name": "Bootstrap",
+    "color": "#7952B3"
+  },
+  "sass": {
+    "name": "Sass",
+    "color": "#CC6699",
+    "skills": true
+  },
+  "node": {
+    "name": "Node",
+    "color": "#339933",
+    "skills": true
+  },
+  "Angular": {
+    "name": "Angular",
+    "color": "#0F0F11",
+    "skills": true
+  },
+  "Mysql": {
+    "name": "Mysql",
+    "color": "#4479A1",
+    "skills": true
+  },
+  "VirtualBox": {
+    "name": "VirtualBox",
+    "color": "#2F61B4",
+    "skills": true
+  },
+  "Apache": {
+    "name": "Apache",
+    "color": "#D22128",
+    "skills": true
+  },
+  "Docker": {
+    "name": "Docker",
+    "color": "#2496ED",
+    "skills": true
+  },
+  "Jenkins": {
+    "name": "Jenkins",
+    "color": "#D24939",
+    "skills": true
+  },
+  "Java": {
+    "name": "Java",
+    "color": "#000000",
+    "skills": true
+  },
+  "Markdown": {
+    "name": "Markdown",
+    "color": "#000000",
+    "skills": true
+  },
+  "R": {
+    "name": "R",
+    "color": "#276DC3",
+    "skills": true
+  }
 }

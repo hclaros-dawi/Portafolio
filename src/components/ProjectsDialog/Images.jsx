@@ -2,18 +2,23 @@ import arrowIcon from '@/assets/icons/arrow.svg'
 import '@/styles/projectsDialog/images.css'
 import { useEffect, useState } from 'react'
 
-export default function Images ({ currentProject, orderProjects }) {
+export default function Images({ currentProject, orderProjects }) {
 	const [currentImg, setCurrentImg] = useState(0)
 
-	useEffect(() => changueCurrentImg(0), [currentProject])
+	const images = orderProjects[currentProject]?.images || []
+	const isCarouselActive = images.length > 0
 
-	function handleWheel (e) {
-		if (orderProjects[currentProject].scroll) return
+	useEffect(() => {
+		setCurrentImg(0)
+	}, [currentProject])
+
+	function handleWheel(e) {
+		if (!isCarouselActive || orderProjects[currentProject].scroll) return
 		changueCurrentImg(currentImg + (e.deltaY > 0 ? 1 : -1))
 	}
 
-	function changueCurrentImg (number) {
-		if (number > orderProjects[currentProject].images.length - 1 || number < 0) return
+	function changueCurrentImg(number) {
+		if (number > images.length - 1 || number < 0) return
 		document.querySelectorAll('.project-image').forEach(projectImg => {
 			projectImg.classList.remove('slide-left', 'slide-right')
 			if (projectImg.id !== `project-image-${number}`) {
@@ -25,47 +30,48 @@ export default function Images ({ currentProject, orderProjects }) {
 
 	return (
 		<section>
-			<div className='project-imgs-container' onWheel={handleWheel}>
+			<div
+				className={`project-imgs-container ${!isCarouselActive ? 'carousel-disabled' : ''}`}
+				onWheel={handleWheel}
+			>
 				<article>
-					{
-						orderProjects[currentProject].images && (
-							orderProjects[currentProject].images.map((image, index) => {
-								return <img key={index}
-									src={image} alt={`Project ${orderProjects[currentProject].name} preview #${index + 1}`}
-									className='project-image'
-									loading='lazy'
-									id={`project-image-${index}`}
-								/>
-							}
-							)
-						)
-					}
+					{images.map((image, index) => (
+						<img
+							key={index}
+							src={image}
+							alt={`Project ${orderProjects[currentProject].name} preview #${index + 1}`}
+							className='project-image'
+							loading='lazy'
+							id={`project-image-${index}`}
+						/>
+					))}
 				</article>
 
-				<button onClick={() => changueCurrentImg(currentImg - 1)} disabled={currentImg < 1} className='prev-img'>
+				<button
+					onClick={() => isCarouselActive && changueCurrentImg(currentImg - 1)}
+					disabled={!isCarouselActive || currentImg < 1}
+					className='prev-img'
+				>
 					<img src={arrowIcon} alt='arrow' className='arrow-left' />
 				</button>
 				<button
 					className='next-img'
-					onClick={() => changueCurrentImg(currentImg + 1)}
-					disabled={currentImg === orderProjects[currentProject].images.length - 1}>
+					onClick={() => isCarouselActive && changueCurrentImg(currentImg + 1)}
+					disabled={!isCarouselActive || currentImg === images.length - 1}
+				>
 					<img src={arrowIcon} alt='arrow' />
 				</button>
 			</div>
 
 			<ul className='images-slider'>
-				{
-					orderProjects[currentProject].images && (
-						orderProjects[currentProject].images.map((_, index) => {
-							return <li key={index}
-								className={currentImg === index ? 'selected-p' : ''}
-								onClick={() => changueCurrentImg(index)}></li>
-						}
-						)
-					)
-				}
+				{images.map((_, index) => (
+					<li
+						key={index}
+						className={currentImg === index ? 'selected-p' : ''}
+						onClick={() => isCarouselActive && changueCurrentImg(index)}
+					></li>
+				))}
 			</ul>
 		</section>
-
 	)
 }

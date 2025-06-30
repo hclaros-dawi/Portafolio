@@ -5,20 +5,13 @@ import Skills from '@/components/Skills'
 import Social from '@/components/Social'
 import Title from '@/components/Title'
 import About from '@/components/About'
-import Logo from '@/components/Logo'
 
-import playSound from '@/utils/play-sound'
 import { useEffect } from 'react'
 
 export default function App () {
 	console.log('%cHELLO DEV!', 'color: #9d58fd; font-size: 1rem; font-weight: bold; font-family: sans-serif;')
 
 	useEffect(() => {
-		function clickSound (e) {
-			if (e.target.dataset.sound) return playSound(e.target.dataset.sound)
-			playSound('click.wav')
-		}
-
 		function onLoad () {
 			document.querySelectorAll('.loading-page .container > div').forEach(div => {
 				div.style.animation = 'none'
@@ -28,11 +21,9 @@ export default function App () {
 		}
 
 		window.addEventListener('load', onLoad)
-		document.addEventListener('click', clickSound)
 
 		return () => {
 			window.removeEventListener('load', onLoad)
-			document.removeEventListener('click', clickSound)
 		}
 	}, [])
 
@@ -44,7 +35,6 @@ export default function App () {
 				<About />
 				<Skills />
 				<Social />
-				<Logo />
 				<Projects />
 				<Settings />
 			</main>

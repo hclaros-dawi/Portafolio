@@ -1,6 +1,5 @@
 import { useLanguage } from '@/context/language'
 import repoIcon from '@/assets/icons/repo.svg'
-import liveIcon from '@/assets/icons/live.svg'
 import '@/styles/projectsDialog/project.css'
 
 export default function Project ({ orderProjects, currentProject }) {
@@ -18,17 +17,25 @@ export default function Project ({ orderProjects, currentProject }) {
 			</p>
 
 			<ul className='project-technologies'>
-				{orderProjects[currentProject].techs.map((tech, index) => {
-					return <li key={index}
-						className={`project-skill ${tech.contrast ? 'skill-contrast' : ''}`}
-						style={{ backgroundColor: tech.color ?? 'var(--primary-color)' }}>
-						{tech.image !== false &&
-							<img src={`/skills/${tech.name.toLowerCase()}.svg`} alt={tech.name + ' icon'} />
-						}
-						{tech.name}
-					</li>
-				})}
-			</ul>
+  {orderProjects[currentProject].techs.map((tech, index) => {
+    if (!tech) return null // <-- evita errores si tech es undefined
+
+    const hasContrast = tech?.contrast ?? false
+    const backgroundColor = tech?.color ?? 'var(--primary-color)'
+    const iconSrc = tech?.image !== false ? `/skills/${tech.name?.toLowerCase()}.svg` : null
+
+    return (
+      <li
+        key={index}
+        className={`project-skill ${hasContrast ? 'skill-contrast' : ''}`}
+        style={{ backgroundColor }}
+      >
+        {iconSrc && <img src={iconSrc} alt={`${tech.name} icon`} />}
+        {tech?.name}
+      </li>
+    )
+  })}
+</ul>
 
 			<p className='project-links'>
 				{
@@ -36,14 +43,6 @@ export default function Project ({ orderProjects, currentProject }) {
 						<a href={orderProjects[currentProject].repo} target='_blank' rel='noopener noreferrer' className='code-link'>
 							<img src={repoIcon} alt='' />
 							{translations.projects.code}
-						</a>
-					)
-				}
-				{
-					orderProjects[currentProject]?.live && (
-						<a href={orderProjects[currentProject].live} target='_blank' rel='noopener noreferrer' className='live-link'>
-							<img src={liveIcon} alt='' />
-							{translations.projects.live}
 						</a>
 					)
 				}
